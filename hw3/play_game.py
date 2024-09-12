@@ -1,6 +1,3 @@
-'''
-This is an example of how to create a DeckOfCards object, shuffle it, and deal cards to play a game
-'''
 
 from DeckOfCards import *
 
@@ -11,6 +8,7 @@ def check_ace(card_face, ace_count):
         ace_count += 1
     return ace_count   
 
+# main game loop
 play_again = 'y'
 
 while play_again == 'y':
@@ -49,9 +47,11 @@ while play_again == 'y':
     dealer_card2 = deck.get_card()
     dealer_aces = check_ace(dealer_card2.face, dealer_aces)
 
+
     # set up scores for user and dealer
     score = 0
     dealer_score = 0
+
 
     # calculate the user's and dealer's hand score
     score += card.val
@@ -60,6 +60,7 @@ while play_again == 'y':
     dealer_score += dealer_card.val
     dealer_score += dealer_card2.val
 
+
     # print users cards and score
     print()
     print(f'Card one: {card}')
@@ -67,14 +68,17 @@ while play_again == 'y':
     print()
     print("Your score is: ", score)
 
+
     # set up for user to take a hit
     cont = 0
+
 
     # blackjack check
     if score == 21:
         print("Blackjack! You win!")
         play_again = input("Would you like to play again? (y/n)").lower()
 
+    # user turn
     else:
         while cont == 0:
             # ask user if the want to take a hit
