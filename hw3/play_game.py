@@ -8,6 +8,17 @@ def check_ace(card_face, ace_count):
         ace_count += 1
     return ace_count   
 
+# play again function
+def play_again_function():
+    while True:
+        response = input("Would you like to play again? (y/n)").lower()
+        if response == 'y' or response == 'n':
+            break
+        else:
+            print('Please enter y or n')
+    return response
+
+
 # main game loop
 play_again = 'y'
 
@@ -76,7 +87,7 @@ while play_again == 'y':
     # blackjack check
     if score == 21:
         print("Blackjack! You win!")
-        play_again = input("Would you like to play again? (y/n)").lower()
+        play_again = play_again()
 
     # user turn
     else:
@@ -101,7 +112,7 @@ while play_again == 'y':
                     print("You busted. You lose.")
                     print()
                     # ask user if they want to play again
-                    play_again = input("Would you like to play again? (y/n)").lower()
+                    play_again = play_again_function()
                     cont = 1
 
                 # print new score
@@ -124,7 +135,7 @@ while play_again == 'y':
                     print("Dealer has blackjack, and wins.")
                     print()
                     # ask user if they want to play again
-                    play_again = input("Would you like to play again? (y/n)").lower()
+                    play_again = play_again_function()
                     break
                 else:
                     while dealer_score < 17:
@@ -146,7 +157,7 @@ while play_again == 'y':
                             print()
 
                             # ask user if they want to play again
-                            play_again = input("Would you like to play again? (y/n)").lower()
+                            play_again = play_again_function()
                             break
                     else:   
                         print("Dealer Score: ", dealer_score)
@@ -162,7 +173,7 @@ while play_again == 'y':
                         print()
 
                         # ask user if they want to play again
-                        play_again = input("Would you like to play again? (y/n)").lower()    
+                        play_again = play_again_function()
 
             else: 
                 print('please enter y or n')     
