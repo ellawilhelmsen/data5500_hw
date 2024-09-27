@@ -84,7 +84,7 @@ def high_low_month(dct_full):
 
 # define a function to save the state data to a json file
 def save_data(name, dct_full):
-    json.dump(dct_full, open(f'hw5\{name}.json', 'w'))
+    json.dump(dct_full, open(f'hw5\states_json_data\{name}.json', 'w'))
 
 
 states_file_path = 'hw5\states.txt'   
