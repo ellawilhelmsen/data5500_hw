@@ -1,5 +1,7 @@
 import numpy
 
+# Big O notation: O(n log n)
+
 def max_diff(numbers):
     # sort the array from small to large
     numbers = numpy.sort(numbers)
