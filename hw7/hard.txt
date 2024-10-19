@@ -1,0 +1,15 @@
+Note - I used ChatGPT to explain this question to me. My prompt was "Explain the process of deleting a node from a binary search tree in Python". To learn more about possible edge cases I used the prompt "Explain potential challenges or edge cases that may arise during the deletion process".
+
+To delete a node with no children I would set its parent's pointer (parentnode.left or parentnode.right) to None. 
+
+To delete a node with one child, I would set the parent's pointer to the child of the deleted node. Then, delete the child node
+
+To delete a node with multiple children, I would replace it with either the smallest node in the right subtree or the largest node in the left subtree. Then, use recursion to delete the sucessive nodes using one of the three outlined methods. 
+
+Edge cases:
+No Tree: check for the tree existing before trying to delete
+Node does not exist in the tree: Nothing to be deleted, pass.
+Deleting root node: Use the same deletion method but be sure to reassign the new root after deletion
+Duplicate values: choose a policy, and always delete the leftmost or rightmost value. 
+
+
