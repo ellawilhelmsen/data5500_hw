@@ -26,3 +26,4 @@ insert_value(test, 4)
 insert_value(test, 6)
 insert_value(test, 8)
 
+print(test.key)
