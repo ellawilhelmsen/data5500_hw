@@ -1,6 +1,7 @@
 import networkx as nx
 import requests
 import json
+import os
 
 
 # call api, get prices
@@ -98,9 +99,12 @@ def find_path_weight(graph, tickers):
 
     return max_path, max_path_reverse, max_weight, min_path, min_path_reverse, min_weight
 
+# Get the directory of the code file
+current_dir = os.path.dirname(__file__)
 
+# make the path to the coin data relative to current directory
 # read in coin name and id data
-tickers = [line.strip() for line in open('hw9/coin_ids.txt').readlines()]
+tickers = [line.strip() for line in open(current_dir + '/coin_ids.txt').readlines()]
 
 # create graph
 g = nx.DiGraph()
