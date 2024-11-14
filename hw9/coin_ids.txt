@@ -1,0 +1,7 @@
+ripple,xrp
+ethereum,eth
+carano,ada
+bitcoin,btc
+bitcoin-cash,bch
+eos,eos
+litecoin,ltc
