@@ -1,0 +1,14 @@
+bitcoin-cash,bch
+litecoin,ltc
+solana,sol
+stellar,xrm
+polkadot,dot
+chainlink,link
+bnb,bnb
+dogecoin,doge
+ethereum,eth
+carano,ada
+bitcoin,btc
+chainlink,link
+sushiswap,sushi
+avalanche,avax
